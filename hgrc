@@ -2,7 +2,9 @@
 username = __USERNAME__ <__EMAIL__>
 
 [extensions]
-hgext.extdiff=
+hgext.extdiff =
+color =
+pager =
 
 [extdiff]
 cmd.vdiff = kdiff3
