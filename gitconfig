@@ -1,0 +1,9 @@
+[user]
+	name = __USERNAME__
+	email = __EMAIL__
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	slog = log --pretty=format:"%h%x09%s"

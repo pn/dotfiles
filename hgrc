@@ -1,0 +1,8 @@
+[ui]
+username = __USERNAME__ <__EMAIL__>
+
+[extensions]
+hgext.extdiff=
+
+[extdiff]
+cmd.vdiff = kdiff3
