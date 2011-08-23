@@ -1,0 +1,108 @@
+set nocompatible    " use vim defaults
+set ls=2            " allways show status line
+set tabstop=4       " numbers of spaces of tab character
+set shiftwidth=4    " numbers of spaces to (auto)indent
+set scrolloff=3     " keep 3 lines when scrolling
+set showcmd         " display incomplete commands
+set hlsearch        " highlight searches
+set incsearch       " do incremental searching
+set ruler           " show the cursor position all the time
+set visualbell t_vb=    " turn off error beep/flash
+set novisualbell    " turn off visual bell
+set nobackup        " do not keep a backup file
+set number          " show line numbers
+set noignorecase   " don't ignore case
+set title           " show title in console title bar
+set ttyfast         " smoother changes
+set modeline        " last lines in document sets vim mode
+set modelines=3     " number lines checked for modelines
+set shortmess=atI   " Abbreviate messages
+set nostartofline   " don't jump to first character when paging
+set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
+"set viminfo='20,<50,s10,h
+
+set nocindent  
+
+"set autowrite      " auto saves changes when quitting and swiching buffer
+"set expandtab      " tabs are converted to spaces, use only when required
+set sm             " show matching braces, somewhat annoying...
+"set nowrap         " don't wrap lines
+set mouse=a
+set ttymouse=xterm2
+colorscheme desert " use this color scheme (e.g. desert)
+
+syntax on           " syntax highlighing
+if has("gui_running")
+    " See ~/.gvimrc
+    set guifont=Monospace\ 10  " use this font
+    set lines=50       " height = 50 lines
+    set columns=100        " width = 100 columns
+    "set selectmode=mouse,key,cmd
+endif
+
+if has("autocmd")
+    " Restore cursor position
+    au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+    " Filetypes (au = autocmd)
+    au FileType helpfile set nonumber      " no line numbers when viewing help
+    au FileType helpfile nnoremap <buffer><cr> <c-]>   " Enter selects subject
+    au FileType helpfile nnoremap <buffer><bs> <c-T>   " Backspace to go back
+    
+    " When using mutt, text width=72
+    au FileType mail,tex set textwidth=72
+    au FileType cpp,c,java,sh,pl,php,asp  set autoindent
+    au FileType cpp,c,java,sh,pl,php,asp  set smartindent
+    au FileType cpp,c,java,sh,pl,php,asp  set cindent
+    "au BufRead mutt*[0-9] set tw=72
+    
+    " Automatically chmod +x Shell and Perl scripts
+    "au BufWritePost   *.sh             !chmod +x %
+    "au BufWritePost   *.pl             !chmod +x %
+
+    " File formats
+    au BufNewFile,BufRead  *.pls    set syntax=dosini
+    au BufNewFile,BufRead  *.pc     set filetype=cpp
+    au BufNewFile,BufRead  modprobe.conf    set syntax=modconf
+endif
+
+set nocp
+filetype plugin on
+
+map <Tab> :bn<Enter>
+map <F9> :NERDTree<Enter>
+map <F10> :A<Enter>
+
+"handle bracket autocompletion
+inoremap {<CR> {<CR><BS>}<Esc>ko
+
+"set ctags for std lib
+set tags+=~/.vim/tags/std_tags
+set tags+=~/.vim/tags/std_headers
+
+let OmniCpp_GlobalScopeSearch = 1 "OmniCppComplete settings
+let OmniCpp_NamespaceSearch = 2 "search namespaces in the current buffer and in included files
+let OmniCpp_DisplayMode = 1 "always show all members
+let OmniCpp_ShowScopeInAbbr = 1 "show scope in abbreviation and remove the last column
+let OmniCpp_ShowPrototypeInAbbr = 1 "display prototype in abbreviation
+let OmniCpp_ShowAccess = 1 "show access
+let OmniCpp_DefaultNamespaces = ["std"] "set default namespace
+let OmniCpp_MayCompleteDot = 1 "May complete enabled for dot
+let OmniCpp_MayCompleteArrow = 1 "May complete enabled for arrow
+let OmniCpp_MayCompleteScope = 1 "May complete enabled for scope
+let OmniCpp_SelectFirstItem = 2 "select first popup item (without inserting it to the text)
+
+set completeopt=menuone,menu,longest
+
+"set mru plugin
+let MRU_Auto_Close = 1
+let MRU_Add_Menu = 0 
+
+set autochdir " working directory is always the same as edited buffer
+set colorcolumn=80
+map <F2> :NERDTreeToggle<CR>
+
+set ssop-=options " do not store global and local values in a session
+set ssop-=folds " do not store folds
+colorscheme desert
+set foldmethod=marker
