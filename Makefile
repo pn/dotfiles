@@ -1,4 +1,4 @@
-install:
+install: setparams
 	ln -f -s ~/dotfiles/tmux.conf ~/.tmux.conf
 	ln -f -s ~/dotfiles/vimrc ~/.vimrc
 	ln -f -s ~/dotfiles/hgrc ~/.hgrc
