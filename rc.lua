@@ -314,9 +314,15 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+
+    -- Set Firefox to always map on tag number 2 of screen 1
+    { rule = { class = "Firefox" },  properties = {tag = tags[2][2]}},
+
+    -- Set Thunderbird to always map on tag number 1 of screen 1
+    { rule = { class = "Thunderbird" },  properties = {tag = tags[1][1]}},
+
+    -- Set Pidgin to always map on tag number 1 of screen 1
+    { rule = { class = "Pidgin" },  properties = {tag = tags[1][1]}},
 }
 -- }}}
 
