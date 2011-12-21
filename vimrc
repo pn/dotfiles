@@ -1,5 +1,6 @@
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
+set expandtab
 set tabstop=4       " numbers of spaces of tab character
 set shiftwidth=4    " numbers of spaces to (auto)indent
 set scrolloff=3     " keep 3 lines when scrolling
