@@ -222,7 +222,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     -- screen lock
-    awful.key({ modkey, "Shift", "Control" }, "l", function () awful.util.spawn("slock") end),
+    awful.key({ modkey, "Shift", "Control" }, "l", function () awful.util.spawn("xlock") end),
 
     awful.key({ modkey }, "x",
               function ()
