@@ -7,3 +7,7 @@
 	branch = auto
 [alias]
 	slog = log --pretty=format:"%h%x09%s"
+[merge]
+	tool = kdiff3
+[diff]
+	tool = kdiff3
