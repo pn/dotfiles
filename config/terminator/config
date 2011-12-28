@@ -1,0 +1,19 @@
+[global_config]
+  handle_size = 1
+  focus = mouse
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    backspace_binding = control-h
+    show_titlebar = False
+    cursor_color = "#00ff00"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
