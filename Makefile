@@ -5,7 +5,7 @@ install: setparams
 	ln -f -s ~/dotfiles/gitconfig ~/.gitconfig
 	ln -f -s ~/dotfiles/pydistutils.cfg ~/.pydistutils.cfg
 	mkdir -p ~/.config/awesome
-	ln -f -s ~/dotfiles/rc.lua ~/.config/awesome/rc.lua
+	ln -f -s ~/dotfiles/config/awesome/rc.lua ~/.config/awesome/rc.lua
 setparams:
 	[ -f params ] && . ./params; sed -i -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
 		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" hgrc gitconfig
