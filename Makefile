@@ -7,8 +7,11 @@ install: setparams
 	mkdir -p ~/.config/awesome ~/.config/terminator
 	ln -f -s ~/dotfiles/config/awesome/rc.lua ~/.config/awesome/rc.lua
 	ln -f -s ~/dotfiles/config/terminator/config ~/.config/terminator/config
-setparams:
-	[ -f params ] && . ./params; sed -i -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
+setparamshome:
+	[ -f params.home ] && . ./params.home; sed -i -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
+		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" hgrc gitconfig
+setparamswork:
+	[ -f params.work ] && . ./params.work; sed -i -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
 		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" hgrc gitconfig
 reset:
 	git checkout hgrc
