@@ -1,10 +1,6 @@
+DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap
 install:
-	ln -f -s ~/dotfiles/tmux.conf ~/.tmux.conf
-	ln -f -s ~/dotfiles/vimrc ~/.vimrc
-	ln -f -s ~/dotfiles/hgrc ~/.hgrc
-	ln -f -s ~/dotfiles/gitconfig ~/.gitconfig
-	ln -f -s ~/dotfiles/pydistutils.cfg ~/.pydistutils.cfg
-	ln -f -s ~/dotfiles/xmodmap ~/.xmodmap
+	for file in $(DOTFILES); do ln -f -s ~/dotfiles/$$file ~/.$$file; done
 	mkdir -p ~/.config/awesome ~/.config/terminator
 	ln -f -s ~/dotfiles/config/awesome/rc.lua ~/.config/awesome/rc.lua
 	ln -f -s ~/dotfiles/config/terminator/config ~/.config/terminator/config
