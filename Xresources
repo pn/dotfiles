@@ -1,0 +1,14 @@
+XTerm*scrollBar: true
+XTerm*saveLines: 10000
+XTerm*loginShell: true
+XTerm*foreground: gray90
+XTerm*background: black
+XTerm*cursorColor: rgb:00/80/00
+XTerm*borderColor: white
+XTerm*scrollColor: black
+XTerm*visualBell: true
+xterm*font:		-Misc-Fixed-Medium-R-Normal--20-200-75-75-C-100-ISO10646-1
+*backarrowKeyIsErase: false
+*ptyInitialErase: false
+*backarrowKey: true
+XLock.mode: blank

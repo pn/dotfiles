@@ -1,4 +1,5 @@
-DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap
+DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap Xresources \
+bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession
 install:
 	for file in $(DOTFILES); do ln -f -s ~/dotfiles/$$file ~/.$$file; done
 	mkdir -p ~/.config/awesome ~/.config/terminator
