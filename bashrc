@@ -119,4 +119,4 @@ export EDITOR=vim
 export PATH=$PATH:$HOME/Apps/android-sdk-linux_x86/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
-[ -f ~/bin/mytput ] && . ~/bin/mytput
+#[ -f ~/bin/mytput ] && . ~/bin/mytput
