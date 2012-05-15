@@ -249,6 +249,11 @@ globalkeys = awful.util.table.join(
     -- screen lock
     awful.key({ modkey, "Shift", "Control" }, "l", function () awful.util.spawn("xlock") end),
 
+    -- multimedia keys
+    awful.key({}, "#121", function () awful.util.spawn("pvol -m") end),
+    awful.key({}, "#122", function () awful.util.spawn("pvol -c -2") end),
+    awful.key({}, "#123", function () awful.util.spawn("pvol -c 2") end),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run({ prompt = "Run Lua code: " },
