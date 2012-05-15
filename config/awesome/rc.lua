@@ -390,4 +390,5 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- Run Network Manager applet
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("hamster-indicator")
+awful.util.spawn_with_shell("xbattstat") -- run xbattbar
 ---}}}
