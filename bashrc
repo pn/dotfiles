@@ -116,7 +116,7 @@ alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
 export EDITOR=vim
-export PATH=$PATH:$HOME/Apps/android-sdk-linux_x86/platform-tools
+export PATH=$PATH:$HOME/Apps/android-sdk-linux/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
 #[ -f ~/bin/mytput ] && . ~/bin/mytput
