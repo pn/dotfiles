@@ -123,4 +123,6 @@ export EDITOR=vim
 export PATH=$PATH:$HOME/Apps/android-sdk-linux/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
+export CPPUTEST_HOME=~/Apps/CppUTest
+export HISTIGNORE='pwd:logproj *'
 #[ -f ~/bin/mytput ] && . ~/bin/mytput
