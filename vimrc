@@ -12,7 +12,7 @@ set visualbell t_vb=    " turn off error beep/flash
 set novisualbell    " turn off visual bell
 set nobackup        " do not keep a backup file
 set number          " show line numbers
-set noignorecase   " don't ignore case
+set noignorecase    " don't ignore case
 set title           " show title in console title bar
 set ttyfast         " smoother changes
 set modeline        " last lines in document sets vim mode
@@ -24,9 +24,7 @@ set whichwrap=b,s,h,l,<,>,[,]   " move freely between files
 
 set nocindent  
 
-"set autowrite      " auto saves changes when quitting and swiching buffer
-"set expandtab      " tabs are converted to spaces, use only when required
-set sm             " show matching braces, somewhat annoying...
+set sm              " show matching braces, somewhat annoying...
 "set nowrap         " don't wrap lines
 set mouse=a
 set ttymouse=xterm2
