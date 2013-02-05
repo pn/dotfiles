@@ -409,7 +409,8 @@ end)
 
 -- {{{ Autostart
 -- Run Network Manager applet
-awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("hamster-indicator")
-awful.util.spawn_with_shell("xbattstat") -- run xbattbar
+awful.util.spawn_with_shell("pgrep nm-applet || nm-applet")
+awful.util.spawn_with_shell("pgrep hamster || hamster-indicator")
+awful.util.spawn_with_shell("pgrep xbattstat || xbattstat") -- run xbattbar
+awful.util.spawn_with_shell("pgrep xautolock || xautolock -time 5 -locker slock")
 ---}}}
