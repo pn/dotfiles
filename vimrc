@@ -101,8 +101,10 @@ endif
 set nocp
 filetype plugin on
 
-map <Tab> :bn<Enter>
-map <F9> :NERDTree<Enter>
+"map <Tab> :bn<Enter>
+nnoremap <silent> <F7> :CommandT<CR>
+nnoremap <silent> <F8> :TlistToggle<CR>
+map <F9> :NERDTreeToggle<Enter>
 map <F10> :A<Enter>
 
 "handle bracket autocompletion
