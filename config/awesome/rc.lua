@@ -6,7 +6,7 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
-
+require("vicious")
 -- Load Debian menu entries
 require("debian.menu")
 
@@ -101,6 +101,20 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
+-- gmail widget and tooltip
+mygmail = widget({ type = "textbox" })
+gmail_t = awful.tooltip({ objects = { mygmail },})
+
+mygmailimg = widget({ type = "imagebox" })
+mygmailimg.image = image("/home/pana/.config/awesome/gmail.png")
+
+vicious.register(mygmail, vicious.widgets.gmail,
+                function (widget, args)
+                    gmail_t:set_text(args["{subject}"])
+                    gmail_t:add_to_object(mygmailimg)
+                    return args["{count}"]
+                 end, 120)
+
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
@@ -180,7 +194,9 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
-        s == 1 and mysystray or nil,
+        mysystray or nil,
+        mygmail,
+        mygmailimg,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
