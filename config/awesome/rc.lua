@@ -366,7 +366,7 @@ awful.rules.rules = {
 
     -- Set Firefox to always map on tag number 2 of last screen
     -- setting screen that does not exist causes loading of default rc.lua
-    { rule = { class = "Firefox" },  properties = {tag = tags[screen.count()][2]}},
+    -- { rule = { class = "Firefox" },  properties = {tag = tags[screen.count()][2]}},
 
     -- Set Thunderbird to always map on tag number 1 of screen 1
     { rule = { class = "Thunderbird" },  properties = {tag = tags[1][1]}},
