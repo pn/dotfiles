@@ -111,8 +111,8 @@ map <F10> :A<Enter>
 inoremap {<CR> {<CR><BS>}<Esc>ko
 
 "set ctags for std lib
-set tags+=~/.vim/tags/std_tags
-set tags+=~/.vim/tags/std_headers
+set tags+=~/.vim/tags/cpp
+set tags+=./tags,/
 
 "set mru plugin
 let MRU_Auto_Close = 1
