@@ -140,3 +140,5 @@ nnoremap <Leader>wf :match<CR>
 highlight TabIndent ctermbg=darkgrey guibg=darkgrey
 nnoremap <Leader>tn :match TabIndent /^\t\+/<CR>
 nnoremap <Leader>tf :match<CR>
+
+let g:clang_user_options='|| exit 0'
