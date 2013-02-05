@@ -1,3 +1,33 @@
+" Vim Addon Manager setup magic
+fun! EnsureVamIsOnDisk(vam_install_path)
+  let is_installed_c = "isdirectory(a:vam_install_path.'/vim-addon-manager/autoload')"
+  if eval(is_installed_c)
+    return 1
+  else
+    if 1 == confirm("Clone VAM into ".a:vam_install_path."?","&Y\n&N")
+      call mkdir(a:vam_install_path, 'p')
+      execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '.shellescape(a:vam_install_path, 1).'/vim-addon-manager'
+      exec 'helptags '.fnameescape(a:vam_install_path.'/vim-addon-manager/doc')
+    endif
+    return eval(is_installed_c)
+  endif
+endf
+
+fun! SetupVAM()
+  let vam_install_path = expand('$HOME') . '/.vim/vim-addons'
+  if !EnsureVamIsOnDisk(vam_install_path)
+    echohl ErrorMsg
+    echomsg "No VAM found!"
+    echohl NONE
+    return
+  endif
+  exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
+
+  " Tell VAM which plugins to fetch & load:
+  call vam#ActivateAddons(['UltiSnips','The_NERD_tree', 'The_NERD_Commenter', 'taglist', 'align', 'matchit.zip', 'Command-T', 'surround', 'repeat', 'ack', 'bufexplorer.zip', 'clang_complete', 'github:altercation/vim-colors-solarized', 'autoload_cscope', 'CCTree', 'minibufexplorer'], {'auto_install' : 0})
+endfun
+call SetupVAM()
+
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set expandtab
