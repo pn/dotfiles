@@ -1,4 +1,5 @@
 [global_config]
+  enabled_plugins = InactivityWatch, TestPlugin, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   handle_size = 1
   focus = mouse
 [keybindings]
