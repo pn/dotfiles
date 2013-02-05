@@ -105,3 +105,14 @@ set ssop-=options " do not store global and local values in a session
 set ssop-=folds " do not store folds
 colorscheme desert
 set foldmethod=marker
+
+" highligh extra whitespace
+" see http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+nnoremap <Leader>wn :match ExtraWhitespace /\s\+$/<CR>
+nnoremap <Leader>wf :match<CR>
+
+" highligh tab indent
+highlight TabIndent ctermbg=darkgrey guibg=darkgrey
+nnoremap <Leader>tn :match TabIndent /^\t\+/<CR>
+nnoremap <Leader>tf :match<CR>
