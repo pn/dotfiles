@@ -28,6 +28,9 @@ fun! SetupVAM()
 endfun
 call SetupVAM()
 
+" ack config
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set expandtab
