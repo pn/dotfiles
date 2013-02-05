@@ -126,3 +126,8 @@ export PYTHONPATH=$PYTHONPATH:~/py-lib
 export CPPUTEST_HOME=~/Apps/CppUTest
 export HISTIGNORE='pwd:logproj *'
 #[ -f ~/bin/mytput ] && . ~/bin/mytput
+serial ()
+{
+        test -w /dev/ttyUSB0 || sudo chmod 666 /dev/ttyUSB0;
+        screen /dev/ttyUSB0 115200
+}
