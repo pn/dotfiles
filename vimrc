@@ -114,20 +114,6 @@ inoremap {<CR> {<CR><BS>}<Esc>ko
 set tags+=~/.vim/tags/std_tags
 set tags+=~/.vim/tags/std_headers
 
-let OmniCpp_GlobalScopeSearch = 1 "OmniCppComplete settings
-let OmniCpp_NamespaceSearch = 2 "search namespaces in the current buffer and in included files
-let OmniCpp_DisplayMode = 1 "always show all members
-let OmniCpp_ShowScopeInAbbr = 1 "show scope in abbreviation and remove the last column
-let OmniCpp_ShowPrototypeInAbbr = 1 "display prototype in abbreviation
-let OmniCpp_ShowAccess = 1 "show access
-let OmniCpp_DefaultNamespaces = ["std"] "set default namespace
-let OmniCpp_MayCompleteDot = 1 "May complete enabled for dot
-let OmniCpp_MayCompleteArrow = 1 "May complete enabled for arrow
-let OmniCpp_MayCompleteScope = 1 "May complete enabled for scope
-let OmniCpp_SelectFirstItem = 2 "select first popup item (without inserting it to the text)
-
-set completeopt=menuone,menu,longest
-
 "set mru plugin
 let MRU_Auto_Close = 1
 let MRU_Add_Menu = 0 
