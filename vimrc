@@ -114,6 +114,9 @@ inoremap {<CR> {<CR><BS>}<Esc>ko
 set tags+=~/.vim/tags/cpp
 set tags+=./tags,/
 
+let g:miniBufExplMapWindowNavVim = 1 " use ctrl + hjkl to move between windows
+let g:miniBufExplMapWindowNavArrows = 1 " the same for arrows
+
 "set mru plugin
 let MRU_Auto_Close = 1
 let MRU_Add_Menu = 0 
