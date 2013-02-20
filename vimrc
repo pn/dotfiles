@@ -111,6 +111,8 @@ map <F10> :A<Enter>
 "handle bracket autocompletion
 inoremap {<CR> {<CR><BS>}<Esc>ko
 
+nmap \q :nohlsearch<CR>
+
 "set ctags for std lib
 set tags+=~/.vim/tags/cpp
 set tags+=./tags,/
