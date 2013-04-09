@@ -62,7 +62,8 @@ set sm              " show matching braces, somewhat annoying...
 "set nowrap         " don't wrap lines
 set mouse=a
 set ttymouse=xterm2
-colorscheme desert " use this color scheme (e.g. desert)
+set background=dark
+colorscheme solarized " use this color scheme (e.g. desert)
 
 syntax on           " syntax highlighing
 if has("gui_running")
@@ -130,7 +131,6 @@ map <F2> :NERDTreeToggle<CR>
 
 set ssop-=options " do not store global and local values in a session
 set ssop-=folds " do not store folds
-colorscheme desert
 set foldmethod=marker
 
 " highligh extra whitespace
