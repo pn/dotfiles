@@ -12,3 +12,4 @@ nnoremap <silent> <C-S-PageDown> :execute 'silent! tabmove ' . tabpagenr()<CR>
 :highlight clear signcolumn
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 set guioptions-=T
+set guioptions-=r
