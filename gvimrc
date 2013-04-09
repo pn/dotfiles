@@ -10,3 +10,4 @@ nnoremap <silent> <C-S-PageDown> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 :EnableGitGutter
 :highlight clear signcolumn
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
