@@ -1,0 +1,5 @@
+#see https://wiki.archlinux.org/index.php/Vim#Empty_space_at_the_bottom_of_gVim_windows
+style "vimfix" {
+  bg[NORMAL] = "#002b36" # this matches my gVim theme 'solarized' bg color.
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
