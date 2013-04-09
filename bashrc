@@ -114,10 +114,11 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-alias gvim='gvim --servername ${VSRV:-GVIM} --remote-tab '
+alias gvim='gvim --servername ${VSRV:-GVIM} --remote-tab ${1:-""}'
 alias sgrep="grep --exclude=*.svn*"
 alias sdiff="svn diff --diff-cmd kdiff3"
 alias ack=ack-grep
+alias vi="vim -u NONE" # do not load vimrc - super fast
 
 export EDITOR=vim
 export PATH=$PATH:$HOME/Apps/android-sdk-linux/platform-tools
