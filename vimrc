@@ -24,7 +24,7 @@ fun! SetupVAM()
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
   " Tell VAM which plugins to fetch & load:
-  call vam#ActivateAddons(['UltiSnips','The_NERD_tree', 'The_NERD_Commenter', 'taglist', 'align', 'matchit.zip', 'Command-T', 'surround', 'repeat', 'ack', 'bufexplorer.zip', 'clang_complete', 'github:altercation/vim-colors-solarized', 'autoload_cscope', 'CCTree', 'Syntastic', 'YouCompleteMe'], {'auto_install' : 0})
+  call vam#ActivateAddons(['UltiSnips','The_NERD_tree', 'The_NERD_Commenter', 'taglist', 'align', 'matchit.zip', 'Command-T', 'surround', 'repeat', 'ack', 'bufexplorer.zip', 'clang_complete', 'github:altercation/vim-colors-solarized', 'autoload_cscope', 'CCTree', 'Syntastic', 'vim-gitgutter', 'fugitive', 'powerline'], {'auto_install' : 0})
 endfun
 call SetupVAM()
 
@@ -34,8 +34,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set nocompatible    " use vim defaults
 set ls=2            " allways show status line
 set expandtab
-set tabstop=4       " numbers of spaces of tab character
-set shiftwidth=4    " numbers of spaces to (auto)indent
+set tabstop=3       " numbers of spaces of tab character
+set softtabstop=3   " numbers of spaces of tab character (for BS)
+set shiftwidth=3    " numbers of spaces to (auto)indent
 set scrolloff=3     " keep 3 lines when scrolling
 set showcmd         " display incomplete commands
 set hlsearch        " highlight searches
