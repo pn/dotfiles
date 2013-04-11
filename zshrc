@@ -21,3 +21,12 @@ serial ()
   test -w /dev/ttyUSB0 || sudo chmod 666 /dev/ttyUSB0;
   screen /dev/ttyUSB0 115200
 }
+
+# editing of commands
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
