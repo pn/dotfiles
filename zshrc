@@ -30,3 +30,12 @@ bindkey -M vicmd v edit-command-line
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
+
+eval `dircolors ~/Apps/dircolors-solarized/dircolors.ansi-dark`
+
+# solarized colors for grep
+unset GREP_COLOR
+export GREP_COLORS='01;33'
+
+# fix colors for vim in tmux
+export TERM="screen-256color"
