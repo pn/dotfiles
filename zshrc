@@ -38,4 +38,8 @@ unset GREP_COLOR
 export GREP_COLORS='01;33'
 
 # fix colors for vim in tmux
-export TERM="screen-256color"
+if [ -n "$TMUX" ]; then
+  export TERM="screen-256color"
+else
+  export TERM="xterm-256color"
+fi
