@@ -13,7 +13,7 @@ alias ack=ack-grep
 alias vi="vim -u NONE" # do not load vimrc - super fast
 
 export EDITOR=vim
-export PATH=$PATH:$HOME/Apps/android-sdk-linux/platform-tools
+export PATH=$HOME/bin:$PATH:$HOME/Apps/android-sdk-linux/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
 serial ()
