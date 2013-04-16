@@ -45,3 +45,6 @@ if [ -n "$TMUX" ]; then
 else
   export TERM="xterm-256color"
 fi
+
+bindkey '^R' history-incremental-search-backward
+bindkey '^R' history-incremental-pattern-search-backward
