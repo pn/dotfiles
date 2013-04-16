@@ -9,8 +9,10 @@ alias pbpaste='xsel --clipboard --output'
 alias gvim='gvim --servername ${VSRV:-GVIM} --remote-tab ${1:-""}'
 alias sgrep="grep --exclude='*.svn*'"
 alias sdiff="svn diff --diff-cmd kdiff3"
+alias gdiff="git diff --color-words --word-diff-regex=. --no-index"
 alias ack=ack-grep
 alias vi="vim -u NONE" # do not load vimrc - super fast
+which colordiff 2>&1 > /dev/null && alias diff=colordiff
 
 export EDITOR=vim
 export PATH=$HOME/bin:$PATH:$HOME/Apps/android-sdk-linux/platform-tools
