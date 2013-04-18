@@ -157,3 +157,6 @@ nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+
+" Allow saving of files as sudo
+cmap w!! %!sudo tee > /dev/null %
