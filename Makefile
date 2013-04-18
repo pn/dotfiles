@@ -4,6 +4,7 @@ bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc gtkrc-2.0 \
 oh-my-zsh
 
 install: $(REPOS) link
+	echo "You may run 'make fonts' if you need."
 
 link:
 	for file in $(DOTFILES); do ln -fsn ~/dotfiles/$$file ~/.$$file; done
@@ -13,8 +14,15 @@ link:
 
 oh-my-zsh:
 	git clone git://github.com/robbyrussell/oh-my-zsh.git oh-my-zsh
+
 dircolors-solarized:
 	git clone https://github.com/seebi/dircolors-solarized
+
+fonts:
+	mkdir -p ~/.fonts
+	cd ~/.fonts && wget https://gist.github.com/qrush/1595572/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf
+	fc-cache -vf ~/.fonts
+	echo "Choose Inconsolaa-dz for Powerline in gnome-terminal preferenes"
 
 home: params.home
 	. ./params.home; for file in *.tmpl; do \
@@ -27,3 +35,5 @@ work: params.work
 	sed -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
 		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > $${file%%.tmpl}; \
 	done
+
+.PHONY: fonts
