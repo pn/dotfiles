@@ -1,3 +1,5 @@
 params.*
 hgrc
 gitconfig
+oh-my-zsh
+dircolors-solarized

@@ -33,7 +33,7 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
 
-eval `dircolors ~/Apps/dircolors-solarized/dircolors.ansi-dark`
+eval `dircolors ~/dotfiles/dircolors-solarized/dircolors.ansi-dark`
 
 # solarized colors for grep
 unset GREP_COLOR
