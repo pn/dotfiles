@@ -20,7 +20,8 @@ dircolors-solarized:
 
 fonts:
 	mkdir -p ~/.fonts
-	cd ~/.fonts && wget https://gist.github.com/qrush/1595572/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf
+	cd ~/.fonts && wget -nc https://gist.github.com/qrush/1595572/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf
+	cd ~/.fonts && test -d powerline-fonts || git clone https://github.com/Lokaltog/powerline-fonts
 	fc-cache -vf ~/.fonts
 	echo "Choose Inconsolaa-dz for Powerline in gnome-terminal preferenes"
 
