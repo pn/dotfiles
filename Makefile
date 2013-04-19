@@ -1,7 +1,7 @@
-REPOS=oh-my-zsh dircolors-solarized
+REPOS=oh-my-zsh dircolors-solarized repos/tmux-powerline
 DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap Xresources \
 bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc gtkrc-2.0 \
-oh-my-zsh
+oh-my-zsh tmux-powerlinerc
 
 install: $(REPOS) link
 	echo "You may run 'make fonts' if you need."
@@ -17,6 +17,10 @@ oh-my-zsh:
 
 dircolors-solarized:
 	git clone https://github.com/seebi/dircolors-solarized
+
+repos/tmux-powerline:
+	test -d repos/tmux-powerline || git clone https://github.com/erikw/tmux-powerline repos/tmux-powerline
+	cp mytmux-theme.sh repos/tmux-powerline/themes/
 
 fonts:
 	mkdir -p ~/.fonts
@@ -37,4 +41,4 @@ work: params.work
 		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > $${file%%.tmpl}; \
 	done
 
-.PHONY: fonts
+.PHONY: fonts repos/tmux-powerline
