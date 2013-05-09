@@ -13,6 +13,8 @@ alias gdiff="git diff --color-words --word-diff-regex=. --no-index"
 alias ack=ack-grep
 alias vi="vim -u NONE" # do not load vimrc - super fast
 which colordiff 2>&1 > /dev/null && alias diff=colordiff
+alias -g ND='*(/om[1])' # newest directory
+alias -g NF='*(.om[1])' # newest file
 
 export EDITOR=vim
 export PATH=$HOME/bin:$PATH:$HOME/Apps/android-sdk-linux/platform-tools
