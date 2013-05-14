@@ -50,3 +50,4 @@ fi
 
 bindkey '^R' history-incremental-search-backward
 bindkey '^R' history-incremental-pattern-search-backward
+DISABLE_AUTO_TITLE=true
