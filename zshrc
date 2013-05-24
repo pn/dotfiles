@@ -17,6 +17,7 @@ alias -g ND='*(/om[1])' # newest directory
 alias -g NF='*(.om[1])' # newest file
 
 export EDITOR=vim
+export CSCOPE_LINEFLAG_AFTER_FILE=yes
 export PATH=$HOME/bin:$PATH:$HOME/Apps/android-sdk-linux/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
