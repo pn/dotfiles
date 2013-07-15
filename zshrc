@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias gvim='gvim --servername ${VSRV:-GVIM} --remote-tab ${1:-""}'
-alias sgrep="grep --exclude='*.svn*'"
+alias sgrep="grep --binary-files=without-match --exclude-dir='.svn'"
 alias sdiff="svn diff --diff-cmd kdiff3"
 alias gdiff="git diff --color-words --word-diff-regex=. --no-index"
 alias ack=ack-grep
