@@ -1,7 +1,7 @@
 REPOS=oh-my-zsh dircolors-solarized repos/tmux-powerline
 DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap Xresources \
-bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc gtkrc-2.0 \
-oh-my-zsh tmux-powerlinerc
+bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc \
+gtkrc-2.0 oh-my-zsh tmux-powerlinerc vimperatorrc
 
 install: $(REPOS) link
 	echo "You may run 'make fonts' if you need."
