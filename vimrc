@@ -161,4 +161,5 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 " Allow saving of files as sudo
 cmap w!! %!sudo tee > /dev/null %
 
+silent !mkdir -p ~/tmp
 set directory=~/tmp
