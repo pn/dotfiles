@@ -8,9 +8,11 @@ install: $(REPOS) link
 
 link:
 	for file in $(DOTFILES); do ln -fsn ~/dotfiles/$$file ~/.$$file; done
-	mkdir -p ~/.config/awesome ~/.config/terminator
+	mkdir -p ~/.config/awesome ~/.config/terminator ~/.config/autostart
 	ln -f -s ~/dotfiles/config/awesome/rc.lua ~/.config/awesome/rc.lua
 	ln -f -s ~/dotfiles/config/terminator/config ~/.config/terminator/config
+	ln -f -s ~/dotfiles/config/autostart/xmodmap.desktop ~/.config/autostart/xmodmap.desktop
+	# TODO: need to replace this with a loop
 
 oh-my-zsh:
 	git clone git://github.com/robbyrussell/oh-my-zsh.git oh-my-zsh
