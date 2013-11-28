@@ -163,3 +163,5 @@ cmap w!! %!sudo tee > /dev/null %
 
 silent !mkdir -p ~/tmp
 set directory=~/tmp
+set directory=~/.vim/swaps
+set backupdir=~/.vim/backups
