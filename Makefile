@@ -5,7 +5,7 @@ bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc \
 gtkrc-2.0 oh-my-zsh tmux-powerlinerc vimperatorrc
 
 install: $(REPOS) link
-	echo "You may run 'make fonts' if you need."
+	@echo "You may run 'make fonts' if you need."
 
 link:
 	find ${FILES} -type d | while read f; do mkdir -p ~/.$${f#${FILES}}; done
