@@ -1,4 +1,5 @@
-REPOS=oh-my-zsh dircolors-solarized repos/tmux-powerline
+FILES=files/
+REPOS=repos/oh-my-zsh repos/dircolors repos/tmux-powerline
 DOTFILES=tmux.conf vimrc hgrc gitconfig pydistutils.cfg xmodmap Xresources \
 bash_logout bashrc gvimrc mplayer xinitrc xmobarrc xsession zshrc \
 gtkrc-2.0 oh-my-zsh tmux-powerlinerc vimperatorrc
@@ -7,18 +8,15 @@ install: $(REPOS) link
 	echo "You may run 'make fonts' if you need."
 
 link:
-	for file in $(DOTFILES); do ln -fsn ~/dotfiles/$$file ~/.$$file; done
-	mkdir -p ~/.config/awesome ~/.config/terminator ~/.config/autostart
-	ln -f -s ~/dotfiles/config/awesome/rc.lua ~/.config/awesome/rc.lua
-	ln -f -s ~/dotfiles/config/terminator/config ~/.config/terminator/config
-	ln -f -s ~/dotfiles/config/autostart/xmodmap.desktop ~/.config/autostart/xmodmap.desktop
-	# TODO: need to replace this with a loop
+	find ${FILES} -type d | while read f; do mkdir -p ~/.$${f#${FILES}}; done
+	find ${FILES} -type f | while read f; do ln -fsn ~/dotfiles/$$f ~/.$${f#files/}; done
+	for f in repos/*; do ln -fsn ~/dotfiles/$$f ~/.$${f#repos/}; done
 
-oh-my-zsh:
-	git clone git://github.com/robbyrussell/oh-my-zsh.git oh-my-zsh
+repos/oh-my-zsh:
+	git clone git://github.com/robbyrussell/oh-my-zsh.git repos/oh-my-zsh
 
-dircolors-solarized:
-	git clone https://github.com/seebi/dircolors-solarized
+repos/dircolors:
+	git clone https://github.com/seebi/dircolors-solarized repos/dircolors
 
 repos/tmux-powerline:
 	test -d repos/tmux-powerline || git clone https://github.com/erikw/tmux-powerline repos/tmux-powerline
@@ -34,13 +32,13 @@ fonts:
 home: params.home
 	. ./params.home; for file in *.tmpl; do \
 	sed -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
-		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > $${file%%.tmpl}; \
+		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > ${FILES}$${file%%.tmpl}; \
 	done
 
 work: params.work
 	. ./params.work; for file in *.tmpl; do \
 	sed -e "s/__USERNAME__/$${USERNAME:-$$USER}/" \
-		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > $${file%%.tmpl}; \
+		-e "s/__EMAIL__/$${EMAIL:-$$USER@$$(hostname)}/" $$file > ${FILES}$${file%%.tmpl}; \
 	done
 
 .PHONY: fonts repos/tmux-powerline
