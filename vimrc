@@ -162,6 +162,8 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 cmap w!! %!sudo tee > /dev/null %
 
 silent !mkdir -p ~/tmp
+silent !mkdir -p ~/.vim/swaps
+silent !mkdir -p ~/.vim/backups
 set directory=~/tmp
 set directory=~/.vim/swaps
 set backupdir=~/.vim/backups
