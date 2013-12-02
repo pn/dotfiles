@@ -76,3 +76,5 @@ function _completemarks {
 
 compctl -K _completemarks jump
 compctl -K _completemarks unmark
+
+synclient VertEdgeScroll=0 # disable touchpad scroll
