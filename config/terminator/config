@@ -3,6 +3,10 @@
   handle_size = 1
   focus = mouse
 [keybindings]
+  resize_up = None
+  resize_right = None
+  resize_down = None
+  resize_left = None
 [profiles]
   [[default]]
     scrollbar_position = hidden
