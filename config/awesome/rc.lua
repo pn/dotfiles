@@ -367,6 +367,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "XCalc" },
       properties = { floating = true } },
+    { rule = { class = "feh" },
+      properties = { floating = true } },
 
     -- Set Firefox to always map on tag number 2 of last screen
     -- setting screen that does not exist causes loading of default rc.lua
