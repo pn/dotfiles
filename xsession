@@ -6,4 +6,4 @@
 #~/.cabal/bin/xmonad
 /usr/bin/xrandr --output VGA1 --mode 1280x1024 --left-of LVDS1 --output LVDS1 --mode 1280x800
 xmodmap ~/.xmodmap
-awesome -c ~/.config/awesome/rc.lua >/tmp/awesome.log 2>&1
+awesome -c ~/.config/awesome/rc.lua >/tmp/awesome-$(id -un).log 2>&1
