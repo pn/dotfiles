@@ -78,3 +78,8 @@ compctl -K _completemarks jump
 compctl -K _completemarks unmark
 
 test -n "$DISPLAY" && synclient VertEdgeScroll=0 # disable touchpad scroll
+
+if [ -f ~/.zshrc_local ]
+then
+  . ~/.zshrc_local
+fi
