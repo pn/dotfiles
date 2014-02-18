@@ -21,7 +21,11 @@ from ranger.api.options import *
 load_default_rc = True
 
 # How many columns are there, and what are their relative widths?
-column_ratios = (1, 3, 4)
+phi = 1.618
+c = 1000
+b = int(c/phi)
+a = int(b/phi)
+column_ratios = (b-a, a, c-b)
 
 # Which files should be hidden?  Toggle this by typing `zh' or
 # changing the setting `show_hidden'
