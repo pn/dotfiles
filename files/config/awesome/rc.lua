@@ -10,7 +10,7 @@ require("vicious")
 -- Load Debian menu entries
 require("debian.menu")
 
-awful.util.spawn_with_shell("pgrep unagi || unagi &")
+-- awful.util.spawn_with_shell("pgrep unagi || unagi &")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to

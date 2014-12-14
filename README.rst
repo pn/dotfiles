@@ -16,3 +16,4 @@ Recommended packages
 --------------------
 
 awesome-extras ranger feh caca-utils atool mediainfo poppler-utils lynx highlight
+- suckless-tools - slock
