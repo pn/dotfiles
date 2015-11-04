@@ -17,3 +17,6 @@ Recommended packages
 
 awesome-extras ranger feh caca-utils atool mediainfo poppler-utils lynx highlight
 - suckless-tools - slock
+
+For gnome terminal use this to update colors:
+https://github.com/Anthony25/gnome-terminal-colors-solarized
