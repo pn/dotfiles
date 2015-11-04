@@ -12,6 +12,11 @@ link:
 	find ${FILES} -type f | while read f; do ln -fsn ~/dotfiles/$$f ~/.$${f#files/}; done
 	for f in repos/*; do ln -fsn ~/dotfiles/$$f ~/.$${f#repos/}; done
 
+linktest:
+	@find ${FILES} -type d | while read f; do test ! -d ~/.$${f#${FILES}} && echo "Missing dir: ~/.$${f#${FILES}}"; done || true
+	@find ${FILES} -type f | while read f; do test ! -h ~/.$${f#files/} && echo "Missing link: ~/.$${f#files/}"; done || true
+	@for f in repos/*; do test ! -h ~/.$${f#repos/} && echo "Missing repo: ~/.$${f#repos/}"; done || true
+
 repos/oh-my-zsh:
 	git clone git://github.com/robbyrussell/oh-my-zsh.git repos/oh-my-zsh
 
