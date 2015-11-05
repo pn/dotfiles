@@ -126,6 +126,7 @@ export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
 export CPPUTEST_HOME=~/Apps/CppUTest
 export HISTIGNORE='pwd:logproj *'
+export MOAI_BIN=~/bin
 #[ -f ~/bin/mytput ] && . ~/bin/mytput
 serial ()
 {
