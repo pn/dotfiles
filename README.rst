@@ -15,7 +15,7 @@ Update
 Recommended packages
 --------------------
 
-awesome-extras ranger feh caca-utils atool mediainfo poppler-utils lynx highlight
+awesome-extra ranger feh caca-utils atool mediainfo poppler-utils lynx highlight
 - suckless-tools - slock
 
 For gnome terminal use this to update colors:
