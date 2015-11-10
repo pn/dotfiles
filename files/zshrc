@@ -23,6 +23,8 @@ export CSCOPE_LINEFLAG_AFTER_FILE=yes
 export PATH=$HOME/bin:$PATH:$HOME/Programs/sdk/platform-tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
+export GOPATH=$HOME/gopath
+export PATH=$GOPATH:$GOPATH/bin:$PATH
 serial ()
 {
   test -w /dev/ttyUSB0 || sudo chmod 666 /dev/ttyUSB0;
