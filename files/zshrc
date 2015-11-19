@@ -21,6 +21,7 @@ alias -g NF='*(.om[1])' # newest file
 export EDITOR=vim
 export CSCOPE_LINEFLAG_AFTER_FILE=yes
 export ANDROID_SDK=$HOME/Programs/sdk
+export ANDROID_NDK=$HOME/Programs/ndk
 export PATH=$HOME/bin:$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
