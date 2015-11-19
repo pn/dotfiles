@@ -1,5 +1,4 @@
 [global_config]
-  tab_position = hidden
   enabled_plugins = InactivityWatch, TestPlugin, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   handle_size = 1
   focus = mouse
