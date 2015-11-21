@@ -25,6 +25,7 @@ export ANDROID_NDK=$HOME/Programs/ndk
 export PATH=$HOME/bin:$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
 export PAGER='less -r'
 export PYTHONPATH=$PYTHONPATH:~/py-lib
+export MOAI_BIN=~/bin
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
 serial ()
