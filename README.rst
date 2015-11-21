@@ -12,6 +12,10 @@ Update
 - run ``git pull``
 - run ``make setparams``
 
+Check if there are some files not linked to dotfiles dir ``make linktest``
+
+Then install missing links with ``make link``
+
 Recommended packages
 --------------------
 
