@@ -1,6 +1,5 @@
-[user]
-	name = __USERNAME__
-	email = __EMAIL__
+[include]
+    path = ~/.gitconfig.user
 [color]
 	diff = auto
 	status = auto
