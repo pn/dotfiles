@@ -1,16 +1,16 @@
 Installation
 ------------
 
-- run ``make install``
 - update ``USERNAME`` and ``EMAIL`` in *params* file
-- run ``make setparams``
+- run ``make home`` or ``make work``
+- run ``make install``
 
 Update
 ------
 
 - run ``make reset``
 - run ``git pull``
-- run ``make setparams``
+- run ``make home`` or ``make work``
 
 Check if there are some files not linked to dotfiles dir ``make linktest``
 
