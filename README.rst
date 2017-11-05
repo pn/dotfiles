@@ -5,6 +5,12 @@ Installation
 - run ``make home`` or ``make work``
 - run ``make install``
 
+Sample *params.home*:
+
+    USERNAME="Firstname Lastname"
+
+    EMAIL="firstname.lastname@example.com"
+
 Update
 ------
 
