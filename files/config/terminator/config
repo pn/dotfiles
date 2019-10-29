@@ -1,49 +1,46 @@
 [global_config]
   enabled_plugins = InactivityWatch, TestPlugin, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  handle_size = 1
   focus = mouse
 [keybindings]
-  resize_up = None
-  resize_right = None
   resize_down = None
   resize_left = None
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_image = None
-    use_system_font = False
-    cursor_color = "#00ff00"
-    foreground_color = "#eee8d5"
-    backspace_binding = control-h
-    show_titlebar = False
-    font = Inconsolata-dz for Powerline Medium 11
-    background_color = "#002b36"
-  [[solarized-dark]]
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_image = None
-    use_system_font = False
-    cursor_color = "#00ff00"
-    foreground_color = "#eee8d5"
-    show_titlebar = False
-    font = Inconsolata-dz for Powerline Medium 11
-    background_color = "#002b36"
-  [[solarized-light]]
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_image = None
-    use_system_font = False
-    cursor_color = "#00ff00"
-    foreground_color = "#002b36"
-    show_titlebar = False
-    font = Inconsolata-dz for Powerline Medium 11
-    background_color = "#eee8d5"
+  resize_right = None
+  resize_up = None
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = solarized-dark
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    backspace_binding = control-h
+    cursor_color = "#00ff00"
+    font = Inconsolata-dz for Powerline Medium 11
+    foreground_color = "#eee8d5"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-dark]]
+    background_color = "#002b36"
+    cursor_color = "#00ff00"
+    font = Inconsolata-dz for Powerline Medium 11
+    foreground_color = "#eee8d5"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-light]]
+    background_color = "#eee8d5"
+    cursor_color = "#00ff00"
+    font = Inconsolata-dz for Powerline Medium 11
+    foreground_color = "#002b36"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    show_titlebar = False
+    use_system_font = False
