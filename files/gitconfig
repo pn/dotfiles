@@ -32,3 +32,5 @@
 	tool = kdiff3
 [push]
 	default = simple
+[pull]
+	rebase = true
