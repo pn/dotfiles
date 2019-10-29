@@ -1,10 +1,19 @@
 setopt interactivecomments
+setopt no_share_history
 
 # confiugre oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
-plugins=(git)
+plugins=( git zsh-kubectl-prompt virtualenv )
 source $ZSH/oh-my-zsh.sh
+
+# kube prompt
+autoload -U colors; colors
+source ~/.oh-my-zsh/custom/plugins/zsh-kubectl-prompt/kubectl.zsh
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
+
+# remove user@host from prompt
+prompt_context() {}
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
@@ -17,16 +26,20 @@ alias vi="vim -u NONE" # do not load vimrc - super fast
 which colordiff 2>&1 > /dev/null && alias diff=colordiff
 alias -g ND='*(/om[1])' # newest directory
 alias -g NF='*(.om[1])' # newest file
+kubeuse() { kubectl config use-context ${1:-minikube} --namespace=${2:-default} }
+kubesetnm() { kubectl config set-context ${1:-minikube} --namespace=${2:-default} }
+alias k=kubectl
 
 export EDITOR=vim
 export CSCOPE_LINEFLAG_AFTER_FILE=yes
-export ANDROID_SDK=$HOME/Programs/sdk
+export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_NDK=$HOME/Programs/ndk
-export PATH=$HOME/bin:$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin/scripts:$HOME/bin/privscripts
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin/scripts:$HOME/bin/privscripts
 export PAGER='less -r'
-export PYTHONPATH=$PYTHONPATH:~/py-lib
+#export PYTHONPATH=$PYTHONPATH:~/py-lib
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
+. ~/bin/bin.paths
 serial ()
 {
   test -w /dev/ttyUSB0 || sudo chmod 666 /dev/ttyUSB0;
@@ -89,3 +102,18 @@ if [ -f ~/.zshrc_local ]
 then
   . ~/.zshrc_local
 fi
+
+fs() {
+    find . -name \*"$1"
+}
+
+fp() {
+    find . -name "$1"\*
+}
+
+fe() {
+    find . -name "$1"
+}
+
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+true

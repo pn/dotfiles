@@ -124,8 +124,9 @@ export EDITOR=vim
 export ANDROID_SDK=$HOME/Programs/sdk
 export ANDROID_NDK=$HOME/Programs/ndk
 export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin/scripts:$HOME/bin/privscripts
+. ~/bin/bin.paths
 export PAGER='less -r'
-export PYTHONPATH=$PYTHONPATH:~/py-lib
+#export PYTHONPATH=$PYTHONPATH:~/py-lib
 export CPPUTEST_HOME=~/Apps/CppUTest
 export HISTIGNORE='pwd:logproj *'
 export GOPATH=$HOME/gopath
@@ -136,3 +137,4 @@ serial ()
         test -w /dev/ttyUSB0 || sudo chmod 666 /dev/ttyUSB0;
         screen /dev/ttyUSB0 115200
 }
+source <(kubectl completion bash)
