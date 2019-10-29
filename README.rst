@@ -1,6 +1,7 @@
 Installation
 ------------
 
+- ``apt-get install $(cat packages)``
 - update ``USERNAME`` and ``EMAIL`` in *params* file
 - run ``make home`` or ``make work``
 - run ``make install``
