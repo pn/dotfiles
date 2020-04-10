@@ -123,7 +123,7 @@ alias vi="vim -u NONE" # do not load vimrc - super fast
 export EDITOR=vim
 export ANDROID_SDK=$HOME/Programs/sdk
 export ANDROID_NDK=$HOME/Programs/ndk
-export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin/scripts:$HOME/bin/privscripts
+export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin
 . ~/bin/bin.paths
 export PAGER='less -r'
 #export PYTHONPATH=$PYTHONPATH:~/py-lib
