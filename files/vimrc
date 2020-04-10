@@ -187,3 +187,7 @@ endfunction
 
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+
+" enable project specific .vimrc and disable unsefa cmds there
+set exrc
+set secure
