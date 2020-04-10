@@ -576,6 +576,10 @@ client.connect_signal("mouse::enter", function(c)
     end
 end)
 
+-- Preserves windows assignemet to tags when switching screens (xrandr --auto)
+screen.connect_signal("removed", awesome.restart)
+screen.connect_signal("added", awesome.restart)
+
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 awful.util.spawn_with_shell("pgrep xautolock || xautolock -time 5 -locker slock")
