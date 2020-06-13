@@ -584,4 +584,5 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 awful.util.spawn_with_shell("pgrep xautolock || xautolock -time 5 -locker slock")
 awful.util.spawn_with_shell("pgrep redshift-gtk || redshift-gtk")
+awful.util.spawn_with_shell("pgrep xfce4-power-manager || xfce4-power-manager")
 awful.util.spawn_with_shell("pgrep compton || compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible") -- fix vsync
