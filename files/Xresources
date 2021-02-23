@@ -12,4 +12,4 @@ xterm*font:		-Misc-Fixed-Medium-R-Normal--20-200-75-75-C-100-ISO10646-1
 *ptyInitialErase: false
 *backarrowKey: true
 XLock.mode: blank
-# Xft.dpi: 192
+Xft.dpi: 144
