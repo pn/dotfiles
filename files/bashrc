@@ -124,13 +124,16 @@ export EDITOR=vim
 export ANDROID_SDK=$HOME/Programs/sdk
 export ANDROID_NDK=$HOME/Programs/ndk
 export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$HOME/bin
-. ~/bin/bin.paths
+if [ -x ~/bin/bin.paths ]; then
+  . ~/bin/bin.paths
+fi
 export PAGER='less -r'
 #export PYTHONPATH=$PYTHONPATH:~/py-lib
 export CPPUTEST_HOME=~/Apps/CppUTest
 export HISTIGNORE='pwd:logproj *'
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
+export PARALLEL_UPDATE=true
 #[ -f ~/bin/mytput ] && . ~/bin/mytput
 serial ()
 {
