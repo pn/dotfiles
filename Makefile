@@ -27,6 +27,10 @@ repos/tmux-powerline:
 	test -d repos/tmux-powerline || git clone https://github.com/erikw/tmux-powerline repos/tmux-powerline
 	cp mytmux-theme.sh repos/tmux-powerline/themes/
 
+repos/battery-widget:
+	git clone git@github.com:deficient/battery-widget.git repos/battery-widget
+	# TODO link to ~/.config/awesome/battery-widget
+
 fonts:
 	mkdir -p ~/.fonts
 	cd ~/.fonts && wget -nc https://gist.github.com/qrush/1595572/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf
