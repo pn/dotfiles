@@ -586,3 +586,4 @@ awful.util.spawn_with_shell("pgrep xautolock || xautolock -time 5 -locker slock"
 awful.util.spawn_with_shell("pgrep redshift-gtk || redshift-gtk")
 awful.util.spawn_with_shell("pgrep xfce4-power-manager || xfce4-power-manager")
 awful.util.spawn_with_shell("pgrep compton || compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible") -- fix vsync
+awful.util.spawn_with_shell("pgrep gnome-keyring-daemon || /usr/bin/gnome-keyring-daemon --start --components=secrets")
