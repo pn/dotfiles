@@ -45,7 +45,8 @@ end
 
 --  Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "gtk/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -581,11 +582,12 @@ end)
 screen.connect_signal("removed", awesome.restart)
 screen.connect_signal("added", awesome.restart)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+--:client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 awful.util.spawn_with_shell("pgrep xautolock || xautolock -time 5 -locker slock")
 awful.util.spawn_with_shell("pgrep redshift-gtk || redshift-gtk")
 awful.util.spawn_with_shell("pgrep xfce4-power-manager || xfce4-power-manager")
-awful.util.spawn_with_shell("pgrep compton || compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible") -- fix vsync
+-- awful.util.spawn_with_shell("pgrep compton || compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --unredir-if-possible") -- fix vsync
 awful.util.spawn_with_shell("pgrep gnome-keyring-daemon || /usr/bin/gnome-keyring-daemon --start --components=secrets")
-awful.util.spawn_with_shell("pgrep xfce4-power-manager || /usr/bin/xfce4-power-manager")
+awful.util.spawn_with_shell("pgrep blueman-applet || /usr/bin/blueman-applet")
+awful.util.spawn_with_shell("feh --bg-scale Pictures/wallpapers/default")
